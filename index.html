@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Happy Birthday, Hana</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Outfit:wght@300;400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="sky" aria-hidden="true"></div>
+    <div class="confetti" id="confetti" aria-hidden="true"></div>
+    <div class="stars-bg" id="starsBg" aria-hidden="true"></div>
+
+    <main>
+      <section class="panel hero">
+        <div class="panel-inner">
+          <p class="eyebrow">hello hello</p>
+          <h1 class="name">Hana</h1>
+          <p class="headline">Happy Birthday</p>
+          <p class="support">
+            Hope your day is full of great vibes and zero stress.
+          </p>
+          <div class="hero-actions">
+            <button type="button" class="reveal" id="reveal">
+              Read the note
+            </button>
+            <button
+              type="button"
+              class="reveal ghost"
+              id="partyBtn"
+              aria-pressed="false"
+            >
+              Party mode
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section class="panel letter" id="letter" hidden>
+        <div class="panel-inner">
+          <p class="letter-label">a quick note</p>
+          <p class="letter-body" id="letterBody"></p>
+          <a class="scroll-hint" href="#gift">next</a>
+        </div>
+      </section>
+
+      <section class="panel section gift-section" id="gift">
+        <div class="panel-inner">
+          <p class="section-label">first things first</p>
+          <h2 class="section-title">Unwrap a gift</h2>
+          <p class="section-support">
+            Tap the box to open it — birthday luck included, batteries not
+            required.
+          </p>
+
+          <button
+            type="button"
+            class="gift"
+            id="giftBtn"
+            aria-label="Open the birthday gift"
+          >
+            <span class="gift-lid">
+              <span class="gift-bow"></span>
+              <span class="gift-bow-knot"></span>
+            </span>
+            <span class="gift-box">
+              <span class="gift-ribbon-v"></span>
+              <span class="gift-ribbon-h"></span>
+            </span>
+            <span class="gift-spark" aria-hidden="true"></span>
+          </button>
+          <p class="gift-status" id="giftStatus">Still wrapped — tap to open</p>
+          <a class="scroll-hint" href="#surprises">next</a>
+        </div>
+      </section>
+
+      <section class="panel section japan-section" id="surprises">
+        <div class="panel-inner">
+          <p class="section-label">future plans</p>
+          <h2 class="section-title">Pack for Japan</h2>
+          <p class="section-support">
+            Tap items to toss them in the bag. One day this trip is happening.
+          </p>
+
+          <div class="suitcase" aria-hidden="true">
+            <span class="suitcase-body"></span>
+            <span class="suitcase-lid"></span>
+            <span class="suitcase-handle"></span>
+            <span class="suitcase-fill" id="suitcaseFill"></span>
+          </div>
+
+          <div class="pack-row" id="packRow"></div>
+          <p class="pack-status" id="packStatus" aria-live="polite">
+            Bag is empty — start packing
+          </p>
+          <a class="scroll-hint" href="#tasks">next</a>
+        </div>
+      </section>
+
+      <section class="panel section tasks-section" id="tasks">
+        <div class="panel-inner">
+          <p class="section-label">different countries, same call</p>
+          <h2 class="section-title">Discord to-do list</h2>
+          <p class="section-support">
+            Distance is annoying — Discord is not. Tap a task when you finish it
+            together.
+          </p>
+          <div class="task-list" id="taskList"></div>
+          <p class="task-progress" id="taskProgress" aria-live="polite">
+            0 / 3 done — hop on Discord and start
+          </p>
+          <p class="footer-line">Made for Hana · have a great day</p>
+        </div>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
